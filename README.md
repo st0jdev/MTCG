@@ -1,2 +1,1 @@
-#MTCG
-##Monster Tradings Cards Game
+https://github.com/st0jdev/MTCG
