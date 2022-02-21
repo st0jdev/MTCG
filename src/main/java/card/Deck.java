@@ -21,6 +21,12 @@ public class Deck {
 
     }
 
+    public Card fCard(){
+
+        return this._Deck.get(0);
+
+    }
+
 
 
 
