@@ -10,9 +10,10 @@ public class MonsterCard extends Card{
     @Setter
     CardType _cType;
 
-    public MonsterCard(String name, int damage, ElementType type){
 
-        super(name,damage,type);
+    public MonsterCard(String name, int damage, ElementType type, MonsterName mName){
+
+        super(name,damage,type,mName);
 
         _cType=CardType.MONSTER;
 

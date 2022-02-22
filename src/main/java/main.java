@@ -7,8 +7,8 @@ public class main {
 
         System.out.println("Willkommen bei MTCG!");
 
-        User u1=new User("stefan","Test",20);
-        User u2=new User("stefan","Test",20);
+        User u1=new User("stefan","Test");
+        User u2=new User("stefan2","Test");
 
         Battle battle=new Battle(u1,u2);
 

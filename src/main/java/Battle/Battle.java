@@ -1,8 +1,6 @@
 package Battle;
 
-import card.Card;
-import card.Deck;
-import card.MonsterCard;
+import card.*;
 import user.User;
 
 public class Battle {
@@ -67,8 +65,32 @@ public class Battle {
         int damage1= c1.get_damage();
         int damage2= c2.get_damage();
 
-        //Kein Gewinner
-       if(damage1==damage2){
+        if(c1.get_mName().equals(MonsterName.GOBLIN) && c2.get_mName().equals(MonsterName.DRAGON)){
+
+            return 2;
+
+        }else if (c1.get_mName().equals(MonsterName.DRAGON) && c2.get_mName().equals(MonsterName.GOBLIN)){
+
+
+            return 1;
+
+        }else if(c1.get_mName().equals(MonsterName.WIZZARD) && c2.get_mName().equals(MonsterName.ORK)){
+
+            return 1;
+
+        }else if(c1.get_mName().equals(MonsterName.ORK) && c2.get_mName().equals(MonsterName.WIZZARD)){
+
+            return 2;
+
+        }else if(c1.get_mName().equals(MonsterName.ELVE) && c1.get_type().equals(ElementType.FIRE) && c2.get_mName().equals(MonsterName.DRAGON)){
+
+            return 1;
+
+        }else if(c1.get_mName().equals(MonsterName.DRAGON) && c2.get_type().equals(ElementType.FIRE) && c2.get_mName().equals(MonsterName.ELVE)){
+
+            return 2;
+
+        }else if(damage1==damage2){
 
            return 0;
 

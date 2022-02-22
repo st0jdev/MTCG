@@ -17,11 +17,16 @@ public class Card {
     @Setter
     ElementType _type;
 
-    public Card(String name, int damage, ElementType type){
+    @Getter
+    @Setter
+    MonsterName _mName;
+
+    public Card(String name, int damage, ElementType type, MonsterName mName){
 
         _name=name;
         _damage=damage;
         _type=type;
+        _mName=mName;
 
     }
 
