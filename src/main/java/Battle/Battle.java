@@ -21,6 +21,9 @@ public class Battle {
 
         int roundR;
 
+        Card c1;
+        Card c2;
+
         for(int i=0;i<rounds;i++){
 
             System.out.println("Runde "+rounds+":");
@@ -43,37 +46,40 @@ public class Battle {
 
             }
 
-            System.out.println( _player1.get_Deck().fCard().get_name()+" von "+_player1.get_username()+" zieht in den Kampf.");
-            System.out.println( _player2.get_Deck().fCard().get_name()+" von "+_player2.get_username()+" zieht in den Kampf.");
+            c1=_player1.get_Deck().rndCard();
+            c2=_player2.get_Deck().rndCard();
+
+            System.out.println( c1.get_name()+" von "+_player1.get_username()+" zieht in den Kampf.");
+            System.out.println( c2.get_name()+" von "+_player2.get_username()+" zieht in den Kampf.");
 
             //Vergleichen von Karten
             //Monsterkampf
-            if(_player1.get_Deck().fCard() instanceof MonsterCard && _player2.get_Deck().fCard() instanceof MonsterCard){
+            if(c1 instanceof MonsterCard && c2 instanceof MonsterCard){
 
 
-               roundR = MonsterFight(_player1.get_Deck().fCard(),_player2.get_Deck().fCard());
+               roundR = MonsterFight(c1,c2);
 
 
             }else{
 
 
 
-                roundR = SpellFight(_player1.get_Deck().fCard(),_player2.get_Deck().fCard());
+                roundR = SpellFight(c1,c2);
             }
 
             switch(roundR){
 
                 case 0: System.out.println("Die Runde verlief unentschieden.");
 
-                case 1: System.out.println(_player1.get_username()+" gewinnt die Runde. "+_player1.get_Deck().fCard().get_name()+" besiegte "+_player2.get_Deck().fCard().get_name());
+                case 1: System.out.println(_player1.get_username()+" gewinnt die Runde. "+c1.get_name()+" besiegte "+c2.get_name());
 
-                case 2: System.out.println(_player2.get_username()+" gewinnt die Runde. "+_player2.get_Deck().fCard().get_name()+" besiegte "+_player1.get_Deck().fCard().get_name());
+                case 2: System.out.println(_player2.get_username()+" gewinnt die Runde. "+c2.get_name()+" besiegte "+c1.get_name());
 
 
 
             }
 
-            takeCard(roundR,_player1.get_Deck().fCard(),_player2.get_Deck().fCard());
+            takeCard(roundR,c1,c2);
 
 
         }
