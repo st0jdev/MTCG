@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Deck {
@@ -12,12 +13,12 @@ public class Deck {
     int _nCards;
     @Getter
     @Setter
-    List <Card> _Deck;
+    LinkedList<Card> _Deck;
 
     public Deck(){
 
         _nCards=4;
-        _Deck = new ArrayList<>();
+        _Deck = new LinkedList<>();
 
     }
 

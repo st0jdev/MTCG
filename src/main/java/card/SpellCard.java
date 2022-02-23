@@ -12,7 +12,7 @@ public class SpellCard extends Card{
 
     public SpellCard(String name, int damage, ElementType type){
 
-        super(name,damage,type);
+        super(name,damage,type,MonsterName.SPELL);
 
         _cType=CardType.SPELL;
 

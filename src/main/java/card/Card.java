@@ -21,7 +21,7 @@ public class Card {
     @Setter
     MonsterName _mName;
 
-    public Card(String name, int damage, ElementType type, MonsterName mName){
+    public Card(String name, int damage, ElementType type ,MonsterName mName){
 
         _name=name;
         _damage=damage;
