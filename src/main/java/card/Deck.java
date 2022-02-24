@@ -24,11 +24,6 @@ public class Deck {
 
     }
 
-    public void delDeck(){
-
-        this._Deck.clear();
-    }
-
     public Card rndCard(){
         int randomPosition = rnd.nextInt(this._Deck.size());
         Card c1 = this._Deck.get(randomPosition);
