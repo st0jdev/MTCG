@@ -8,13 +8,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+@Getter
 public class Deck {
 
-    @Getter
-    int _nCards;
-    @Getter
-    @Setter
-    LinkedList<Card> _Deck;
+    private int _nCards;
+
+    private LinkedList<Card> _Deck;
 
     Random rnd = new Random();
 

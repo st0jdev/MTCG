@@ -1,13 +1,16 @@
 package card;
 
+import lombok.Getter;
+
 import javax.lang.model.element.Element;
 import java.util.List;
 import java.util.Random;
 
+@Getter
 public class Package {
 
-    List<Card> _cList;
-    final int _price=5;
+    private List<Card> _cList;
+    private final int _price=5;
 
 
 

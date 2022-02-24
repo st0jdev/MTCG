@@ -1,13 +1,16 @@
-package Battle;
+package battle;
 
 import card.*;
+import lombok.Getter;
 import user.User;
 
+
+@Getter
 public class Battle {
 
-    final int rounds = 100;
-    User _player1;
-    User _player2;
+    private final int rounds = 100;
+    private User _player1;
+    private User _player2;
 
 
     public Battle(User u1,User u2){
@@ -138,7 +141,7 @@ public class Battle {
     }
 
 
-    private int MonsterFight(Card c1, Card c2){
+    public int MonsterFight(Card c1, Card c2){
 
         int damage1= c1.get_damage();
         int damage2= c2.get_damage();
@@ -184,7 +187,7 @@ public class Battle {
 
     }
 
-    private int SpellFight(Card c1, Card c2){
+    public int SpellFight(Card c1, Card c2){
 
         if(c1.get_mName().equals(MonsterName.KNIGHT) && c2.get_type().equals(ElementType.WATER)){
 

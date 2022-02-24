@@ -5,43 +5,27 @@ import card.Stack;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
+
 public class User {
 
-    @Getter
-    @Setter
-    String _username;
+    private String _username;
 
-    @Getter
-    @Setter
-    String _password;
+    private String _password;
 
-    @Getter
-    @Setter
-    int _coins;
+    private int _coins;
 
-    @Getter
-    @Setter
-    Deck _Deck;
+    private Deck _Deck;
 
-    @Getter
-    @Setter
-    Stack _Stack;
+    private Stack _Stack;
 
-    @Getter
-    @Setter
-    int _elo;
+    private int _elo;
 
-    @Getter
-    @Setter
-    int _wins;
+    private int _wins;
 
-    @Getter
-    @Setter
-    int _losses;
+    private int _losses;
 
-    @Getter
-    @Setter
-    int _games;
+    private int _games;
 
     public User(String username, String password){
 
@@ -61,6 +45,7 @@ public class User {
     public void win(){
 
         this._elo+=3;
+        this._wins++;
         this._games++;
 
     }
@@ -68,6 +53,7 @@ public class User {
     public void loss(){
 
         this._elo-=5;
+        this._losses++;
         this._games++;
 
     }
@@ -77,6 +63,13 @@ public class User {
         this._games++;
 
     }
+
+    public void buyPackage(){
+
+        this._coins-=5;
+
+    }
+
 
 
 

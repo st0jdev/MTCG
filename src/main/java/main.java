@@ -1,18 +1,20 @@
-import Battle.Battle;
-import user.User;
+import service.App;
+import server.Server;
+
+import java.io.IOException;
 
 public class main {
 
     public static void main(String[] args){
 
-        System.out.println("Willkommen bei MTCG!");
+        App app = new App();
+        Server server = new Server(10001, app);
+        try {
+            server.start();
 
-        User u1=new User("stefan","Test");
-        User u2=new User("stefan2","Test");
-
-        Battle battle=new Battle(u1,u2);
-
-        battle.fight();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }

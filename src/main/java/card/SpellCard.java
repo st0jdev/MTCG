@@ -7,8 +7,7 @@ public class SpellCard extends Card{
 
 
     @Getter
-    @Setter
-    CardType _cType;
+    private CardType _cType;
 
     public SpellCard(String name, int damage, ElementType type){
 

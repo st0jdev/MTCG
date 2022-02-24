@@ -3,23 +3,16 @@ package card;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public class Card {
 
-    @Getter
-    @Setter
-    String _name;
+    protected String _name;
 
-    @Getter
-    @Setter
-    int _damage;
+    protected int _damage;
 
-    @Getter
-    @Setter
-    ElementType _type;
+    protected ElementType _type;
 
-    @Getter
-    @Setter
-    MonsterName _mName;
+    protected MonsterName _mName;
 
     public Card(String name, int damage, ElementType type ,MonsterName mName){
 

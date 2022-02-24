@@ -9,8 +9,7 @@ import java.util.List;
 public class Stack {
 
     @Getter
-    @Setter
-    List<Card> _Stack;
+    private List<Card> _Stack;
 
     public Stack() {
 
